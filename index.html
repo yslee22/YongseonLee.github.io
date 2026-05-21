@@ -1,1 +1,332 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+    body {
+        margin: 0;
+        background-color: #f7f3ee;   /* 전체 배경색 */
+        font-family: Arial, sans-serif;
+        color: #111;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1000px;           /* 너무 넓어지지 않게 */
+        margin: 0 auto;              /* 가운데 정렬 */
+        padding: 40px 0;
+    }
+
+    .card {
+        background-color: white;     /* 박스 배경 */
+        border-radius: 10px;         /* 둥근 모서리 */
+        padding: 50px;
+        margin-bottom: 30px;         /* 박스 사이 간격 */
+        box-sizing: border-box;
+    }
+
+    .profile-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .profile-text {
+        flex: 1;
+    }
+
+    .profile-text h1 {
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .profile-text p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    .links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .links a {
+        color: #0066cc;
+        text-decoration: none;
+        margin: 0 6px;
+    }
+
+    .profile-image img {
+        width: 260px;
+        height: 260px;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    h2 {
+        color: #0056a6;
+        font-size: 26px;
+        font-weight: 400;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+
+    .card p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    a {
+        color: #0066cc;
+    }
+
+    .activity-item {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        background-color: #fffcf8;  /* 안쪽 박스 배경 */
+        padding: 22px;
+        margin-top: 20px;
+        box-sizing: border-box;
+    }
+
+    .activity-item img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    flex-shrink: 0;
+    }
+
+    .activity-text {
+    flex: 1;
+    }
+
+    .activity-text h3 {
+        margin: 0 0 6px 0;
+        font-size: 17px;
+        color: #0066cc;
+    }
+
+    .activity-text .date {
+        margin: 0 0 18px 0;
+        font-size: 15px;
+        color: #111;
+    }
+
+    .activity-text p {
+        margin: 0;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+    .experience-item, .education-item {
+        margin-top: 28px;
+    }
+
+    .experience-item h3,
+    .education-item h3 {
+        font-size: 18px;
+        color: #0066cc;
+        margin: 0 0 20px 0;
+    }
+
+    .experience-item .date,
+    .education-item .date {
+        font-size: 15px;
+        margin: 0 0 20px 0;
+    }
+
+    .experience-item ul,
+    .education-item ul {
+        margin: 0 0 0 22px;
+        padding-left: 18px;
+    }
+
+    .experience-item li,
+    .education-item li {
+        line-height: 1.7;
+        font-size: 15px;
+    }
+
+    .honors-list li {
+        margin-bottom: 18px;
+        line-height: 1.6;
+    }
+
+    .honors-list em {
+        display: block;
+        margin-top: 4px;
+    }
+
+    /* 화면이 좁을 때 세로 배치 */
+    @media (max-width: 768px) {
+        .profile-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card {
+            padding: 30px;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <section class="card profile-card">
+        <div class="profile-text">
+            <h1>Yongseon Lee</h1>
+
+            <p>
+            I am a master's student in the Department of Applied Artificial Intelligence at <a href="https://www.seoultech.ac.kr/"> Seoul National University of Science and Technology</a>. 
+                My research focuses on time-series data representation, and I aim to contribute to developing more effective ways to represent and understand temporal data.
+            </p>
+
+            <div class="links">
+            <a href="mailto:yongseon@seoultech.ac.kr">Email</a> /
+            <a href="#">CV</a> /
+            <a href="https://github.com/yslee22">Github</a>
+            </div>
+        </div>
+
+        <div class="profile-image">
+            <img src="image/증명사진.jpg" alt="profile image" />
+        </div>
+        </section>
+
+        <section class="card">
+        <h2>Research Interests</h2>
+
+        <p>
+            I am interested in exploring various research areas involving time-series data. 
+            Currently, I am conducting research in this field at the Pattern Analysis Lab. 
+            Recently, I have begun studying model designs tailored to trend and seasonal components in time-series data, and I plan to further develop this work toward time-series representation learning.
+        </p>
+        
+        </section>
+
+        </section>
+
+        <section class="card">
+        <h2>Research Experience</h2>
+
+        <div class="experience-item">
+            <h3><a href="https://www.etri.re.kr/kor/main/main.etri">ETRI(Electronics and Telecommunications Research Institute)</a></h3>
+            <p class="date"><em>June 2025 – Sep 2025</em></p>
+
+            <ul>
+            <li>Advisor: Prof. JeSeok Ham</li>
+            <li>Vehicle trajectory prediction in V2X cooperative perception environments</li>
+            </ul><br>
+            <h3><a href="https://sites.google.com/view/ipal-lab">IPAL, SeoulTech</a></h3>
+            <p class="date"><em>June 2025 – Present</em></p>
+
+            <ul>
+            <li>Advisor: Prof. BeomSeok Oh</li>
+            <li>Time-Series Data Representation</li>
+            </ul>
+
+            
+        </div>
+        </section>
+
+        <section class="card">
+        <h2>Education</h2>
+
+        <div class="education-item">
+            <h3><a href="https://www.seoultech.ac.kr/">Seoul National University of Science and Technology</a></h3>
+
+            <ul>
+            <li>
+                <strong>B.S. in Applied Artificial Intelligence</strong><br>
+                <em>Mar 2022 – Feb 2026</em>
+            </li>
+            <li>
+                <strong>M.S. in Applied Artificial Intelligence</strong><br>
+                <em>Mar 2026 – present</em>
+            </li>
+            </ul>
+        </div>
+        </section>
+
+        <section class="card">
+        <h2>Honors & Awards</h2>
+
+        <div class="Honors-item">
+            <ul class="honors-list">
+            <li>
+                <strong>Best Paper Award, ACK 2025</strong>
+                <em>“Vehicle Trajectory Prediction Model in a Vehicle-to-Infrastructure Cooperative Perception (V2X) Environment”</em>
+            </li>
+
+            <li>
+                <strong>Full Tuition Scholarship</strong>
+                <em>Mar 2025 – Feb 2026</em>
+            </li>
+            </ul>
+        </div>
+        </section>
+
+        <section class="card">
+        <h2>Extracurricular Activities</h2>
+
+        <div class="activity-item">
+            <img src="images/student-council.jpg" alt="Tobigs">
+
+            <div class="activity-text">
+            <h3>Tobigs, AI Academic Association</h3>
+            <p class="date">June 2025 – July 2026(Expected)</p>
+            <p>
+                Promoted ToBigs, an inter-university AI academic association, and facilitated communication among undergraduate and graduate students interested in AI. 
+                Participated in semester-long team projects using diverse datasets and models. 
+                Took part in Mixeup, a joint IT/DATA hackathon, as a participant in 2025 and as an organizer in 2026, contributing to collaboration across AI and data science student communities.
+            </p>
+            </div>
+        </div>
+
+        <div class="activity-item">
+            <img src="images/student-council.jpg" alt="STEM">
+
+            <div class="activity-text">
+            <h3>STEM(SeoulTech Encouraging Mento)</h3>
+            <p class="date">Mar 2023 – Dec 2025</p>
+            <p>
+                Represented the university at admissions fairs and guided prospective students and parents. Developed mentoring and communication skills by studying changing admissions policies and providing tailored advice.
+            </p>
+            </div>
+        </div>
+
+        <div class="activity-item">
+            <img src="images/unidthon.jpg" alt="Student council">
+
+            <div class="activity-text">
+            <h3>Student Council</h3>
+            <p class="date">Mar 2022 – Dec 2023</p>
+            <p>
+                Planned and organized various departmental events as the Planning Vice Chair of the student council. Through this role, I developed collaboration and problem-solving skills by working with diverse groups of people.
+            </p>
+            </div>
+        </div>
+
+        
+        </section>
+
+    </div>
+</body>
+</html>
